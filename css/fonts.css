@@ -1,0 +1,11 @@
+@font-face {
+  font-family: abadi-condensed-xbold;
+  src: url('../fonts/abadi-condensed-xbold.eot');
+  src: url('../fonts/abadi-condensed-xbold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abadi-condensed-xbold.ttf')        format('truetype');
+}
+
+@font-face {
+  font-family: arial-rounded-bold;
+  src: url('../fonts/arial-rounded-bold.ttf') format('truetype');
+}

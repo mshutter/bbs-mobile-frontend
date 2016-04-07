@@ -1,0 +1,287 @@
+@import 'bourbon';
+@import 'bitters/base';
+@import 'neat';
+
+// Base Color Variables/Classes
+@import 'colors/colors';
+
+// Local Font-Faces
+@import 'fonts.css';
+
+*,
+* > * {
+	box-sizing: border-box;
+}
+
+/**
+ * BB Shenanigans Color Scheme
+ *************************************/
+
+	$bb-red: #CA2525;
+	$bb-yellow: #FFD773;
+	$bb-light-gray: #7C7C7C;
+	$bb-dark-gray: #585858;
+
+	body {
+		margin: 0;
+		background-color: #ddd; 
+	}
+
+/**
+ * Container Styles
+ *************************************/
+
+	#container {
+		width: 600px;
+		height: 1000px;
+		margin: auto;
+	}
+
+/**
+ * Header Styles
+ *************************************/
+
+	header {
+		@include outer-container;
+		background-color: $bb-red;
+		
+		width: 100%;
+		overflow: auto;
+
+		a {
+			color: $white;
+		}
+		
+		#brand {
+			@include span-columns(8);
+			height: 60px;
+			padding: 15px;
+
+			h1 {
+				margin: 0;
+				
+				font: {
+					family: abadi-condensed-xbold, 'Open Sans';
+					size: 38px;
+					weight: 800;
+				}		
+			}
+		}
+
+		#icons {
+			@include span-columns(4);
+			padding-right: 15px;
+			text-align: right;
+			
+			.fa-3x {
+				font-size: 38px;
+				padding: 15px;
+			}
+		}					
+	}
+
+/**
+ * Jumbo Image Styles
+ *************************************/
+
+	#jumbo {
+		width: 100%;
+		height: 315px;
+		
+		background: {
+			color: $bb-yellow;
+			image: url('../img/bb-front.jpg');
+			position: right;
+			size: auto 100%;
+		}
+	}
+
+/**
+ * Operation Hours Styles
+ *************************************/
+
+	#open-wrapper {
+		@include outer-container;
+		
+		width: 100%;
+		height: 110px;
+		background-color: $bb-dark-gray;
+		
+		#hours {
+			@include span-columns(4);
+			height: 100%;
+			
+			background-color: $bb-light-gray;
+			padding-top: 10px;
+
+			text-align: center;
+			 
+			h2 {
+				margin: 0;
+
+				color: white;
+				font: {
+					family: abadi-condensed-xbold, 'Open Sans', sans-serif;
+					size: 42px;
+					weight: 800;
+				}
+			}
+
+			p {				
+				color: $bb-yellow;
+				font: {
+					family: abadi-condensed-xbold, 'Open Sans', sans-serif;
+					size: 32px;
+					weight: 800;
+				}
+			}
+		}
+
+		#days {
+			@include span-columns(8);
+			height: 100%;
+			text-align: center;			
+			
+			span {
+				width: 14%;
+				display: inline-block;
+				height: 100%;
+
+				color: $bb-light-gray;
+				font: {
+					family: abadi-condensed-xbold, 'Open Sans', sans-serif;
+					size: 40px;
+					weight: 800;
+				}
+
+				line-height: 110px;
+				
+				&.op {
+					color: $bb-yellow;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Menu Styles
+	 ***********************************/
+
+		#menu {
+			@include outer-container;
+			background-color: $white; 	
+
+			.menu-category {
+				@include span-columns(6);
+				padding-top: 10px;
+				
+				&:nth-child(odd) {
+					padding-left: 10px;
+				}
+				&:nth-child(even) {
+					@include omega;
+					padding-right: 10px;
+				}
+
+				a {
+					display: block;
+					width: 100%;
+					height: 60px;
+
+					color: $bb-dark-gray;
+					line-height: 54px;
+					font: {
+						family: arial-rounded-bold;
+						size: 28px;
+						weight: 400; }
+					text-align: center;
+					
+					background-color: $bb-yellow; 
+					border: {
+						radius: 8px;
+						style: solid;
+						color: darken($bb-yellow, 30%);
+						width: 3px;
+					}
+				}
+			}
+
+			#menu-full {
+				@include span-columns(12);
+				@include omega;
+				padding: 10px;
+				
+				a {
+					display: block;
+					width: 100%;
+					height: 60px;
+
+					color: $white;
+					line-height: 54px;
+					font: {
+						family: arial-rounded-bold;
+						size: 28px;
+						weight: 400; }
+					text-align: center;
+					
+					background-color: lighten($bb-red, 15%); 
+					border: {
+						radius: 8px;
+						style: solid;
+						color: lighten($bb-red, 7%);
+						width: 3px;
+					}
+				}
+			}
+		}
+
+/**
+ * Footer Styles
+ *************************************/
+
+	footer {
+		@include outer-container;
+		height: 85px;
+		
+		background-color: $bb-light-gray;
+		
+		.third {
+			@include span-columns(4);
+			
+			text-align: center;
+			line-height: 85px;
+			
+			a {
+				display: block;
+
+				color: white;
+				font: {
+					family: arial-rounded-bold;
+					size: 28px;
+					weight: 400; }
+			}
+
+			span {
+				color: $bb-yellow;
+				
+				&.fa,
+				&.fa-star,
+				&.fa-2x {
+					line-height: 85px;
+				}
+			}
+
+			&:nth-child(3) {
+				@include omega;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
